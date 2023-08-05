@@ -61,28 +61,44 @@ article {
 /* STEP ONE */
 /* Using grid, recreate the layout displayed in the image included in this section. Without changing the order of content in the HTML, how could you make Item One appear on top of Item Two? */
 
+/* Define a grid container */
 grid-ex-2 {
     display: grid;
     height: 50vh;
     position: relative;
+
+    /* Set the number of columns in the grid and their size */
     grid-template-columns: repeat(5, 1fr); 
+    
+    /* Set the number of rows in the grid and their size */
     grid-template-rows: repeat(3, 1fr); 
 }
 
-
+/* Styling for the item with id "itemone" */
 #itemone {
     border: 2px solid #fff;
     background-color: rgba(254, 104, 71, 0.6);
+    
+    /* Set the starting row and ending row for this item */
     grid-row: 1 / 2; 
+    
+    /* Set the color of the text */
     color: #fff;
+    
+    /* Set the starting column and ending column for this item */
     grid-column: 1 / 6; 
 }
 
-
+/* Styling for the item with id "itemtwo" */
 #itemtwo {
     background-color: rgba(251, 177, 60, 0.5);
     color: #fff;
     border: 2px dashed #fff;
+    
+    /* Set the starting column and ending column for this item */
     grid-column: 1 / 2;
+
+    /* Set the starting row and ending row for this item */
     grid-row: 1 / 4; 
 }
+
